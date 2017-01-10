@@ -1,7 +1,7 @@
 # TeleCommunicationDocs
 Documents for telecommunication.
 
-* download_rfc.py
+* `download_rfc.py`
  * Download RFC documunt with rfc number.
  * Usage :
  ```
