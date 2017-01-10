@@ -10,7 +10,7 @@ def main():
     if len(sys.argv) != 2:
         # Example
         # 1. ./xxxx.py 2327
-        # 2. ./xxxx.py "2327,2343,3261,1343" 
+        # 2. ./xxxx.py "2327,2343,3261,1343"
         print('Usage: %s RFC_NUM' % sys.argv[0])
         sys.exit(2)
 
@@ -42,36 +42,6 @@ def write_rfc_file(rfc_num, text):
     fw.write(text)
     fw.close()
 
-
-'''
-def parse_options():
-    args = sys.argv[1:]
-    rfc_number_from_file = False
-    rfc_number = '0'
-
-    while args and args[0].startswith('-'):
-        if args[0] == '-r':
-            rfc_number_from_file = True
-            args = args[1:]
-        elif args[0] == '-n':
-            rfc_number = args[1]
-            args = args[1:]
-        elif args[0] in ('-h', '--help'):
-            usage()
-        else:
-            raise SystemExit('Unrecognized options %s' % args[0])
-        args = args[1:]
-
-    if not args:
-        usage()
-
-    if rfc_number == '0' and rfc_number_from_file == False:
-        usage()
-
-    return Options(rfc_number_from_file = rfc_number_from_file,
-                   rfc_number = rfc_number)
-
-'''
 
 if __name__ == '__main__':
     main()
