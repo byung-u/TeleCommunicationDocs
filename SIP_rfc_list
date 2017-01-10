@@ -1,0 +1,65 @@
+######################
+# SIP related protocol
+######################
+
+RFC 2976 The SIP INFO Method   
+RFC 3204 MIME media types for ISUP and QSIG Objects   
+RFC 3261 SIP   
+RFC 3262 Reliablity of Provisional Responses in SIP   
+RFC 3263 SIP : Location SIP Servers   
+RFC 3265 SIP-Specific Event Notification   
+RFC 3311 SIP UPDATE Method   
+RFC 3312 Integration of Resource Management   
+RFC 3313 Private SIP Extensions for Media Authorization   
+RFC 3319 DHCPv6 Options for SIP Servers   
+RFC 3323 A Privacy Mechanism for the SIP   
+RFC 3325 Private Extensions to the SIP for Asserted Identity within Trusted Networks   
+RFC 3326 The Reason Header Field for the SIP   
+RFC 3327 SIP Extension for Tedistering Non-Adjacent Contacts   
+RFC 3329 Security Mechanism Agreement for the SIP   
+RFC 3310 HTTP Digest Authentication Using Authentication and Key Agreement   
+RFC 3361 DHCP Option for SIP Servers   
+RFC 3420 Internet MEdia Type message / sipfrag   
+RFC 3428 SIP for Instant Messaging   
+RFC 3515 The SIP Refer Method   
+RFC 3581 The SIP Extension for Symmetric Response Routing   
+RFC 3608 SIP Extension Header Field for Service Route Discovery During Registration   
+RFC 3853 S/MIME AES Requirement for SIP   
+RFC 3840 Indicating User Agent Capabilities in the SIP   
+RFC 3841 Caller Preferences for SIP   
+RFC 3891 The SIP 'Replaces' Header   
+RFC 3892 The SIP  Referred-By Mechanism   
+RFC 3893 SIP Authenticated Identity Body (AIB) Format   
+RFC 3903 An Event State Publication Extension to the SIP   
+RFC 3911 The SIP 'Join' Header   
+RFC 3968 The IANA Header Field Parameter Registry for the SIP   
+RFC 3969 The IANA Universal Resource Identifier (URI) Parameter Registry for the SIP   
+RFC 4032 Update to the SIP Preconditions Framework   
+RFC 4028 Session Timers in the SIP  
+RFC 4092 Usage of the SDP Alternative Network Address Types (ANAT) Semantics in the SIP   
+RFC 4168 The SCTP as a Transport for SIP   
+RFC 4424 The History-Info Header for SIP   
+RFC 4411 The Reason Header for Preemption for SIP   
+RFC 4412 The Communications Resource-Priority Header for SIP   
+RFC 4488 Suppression of SIP REFER Method Implicit Subscription   
+RFC 4508 Conveying Feature Tags with SIP REFER Method   
+RFC 4485 Guidelines for Authors of Extensions to the SIP   
+RFC 4483 A Mechanism for Content Indirection in SIP Messages   
+RFC 4538 Request Authorization through Dialog Identification in the SIP   
+RFC 4474 Enhancements for Authenticated Identity Management in the SIP
+
+##############################
+# SIP가 사용하는 IETF protocol
+##############################
+RFC 2616 Message formatting (HTTP 1.1)
+RFC 4566 Media Description (SDP)
+RFC 3550 RTP
+RFC 1738 URL &
+RFC 2396 URI
+RFC 1034 &
+RFC 1035 DNS
+RFC 2131 Device Mobility
+RFC 2045 MIME (Multiperpose INternet Mail Extensions)  메시지 포맷 (US-ASCII)에 대한 정의로 SIP 의 Message Body 에 사용
+RFC 4301 &
+RFC 4303 IPSec  보안관렦 규정
+RFC 4346 TLS  Signaling에 대한 보안 규정
