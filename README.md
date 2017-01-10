@@ -1,5 +1,5 @@
 # TeleCommunicationDocs
-Documents for telecommunication.
+Translated RFC 문서
 
 * `download_rfc.py`
  * Download RFC documunt with rfc number.
