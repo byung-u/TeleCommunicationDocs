@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.5
 # -*- coding: utf-8 -*-
 
+# Use 'https://tools.ietf.org' instead of this script.
+
 import sys
 from requests import get
 from bs4 import BeautifulSoup
