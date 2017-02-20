@@ -1,0 +1,9 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: Request
+    Proxy1 ->> Proxy2: Request
+    Proxy2 ->> UA2: Request
+    Note left of Proxy2: Test
+    UA2 -x Proxy2: Response
+    Proxy2 -x Proxy1: Response
+    Proxy1 -x UA1: Response
