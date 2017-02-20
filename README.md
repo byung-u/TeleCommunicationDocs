@@ -1,1 +1,1 @@
-SIP (Session Initiation Protocol) Flow with Mermaid
+SIP (Session Initiation Protocol) sequence diagram with Mermaid
