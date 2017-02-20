@@ -1,0 +1,10 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: Request
+    Proxy1 -->> Proxy2: Request
+    activate Proxy1
+    Note right of Proxy1: Foward to Proxy2
+    Note left of Proxy1: Not possible here ?
+    Note right of Proxy1: Forward to AS ?
+    deactivate Proxy1
+    Proxy1 -->> AS: Request

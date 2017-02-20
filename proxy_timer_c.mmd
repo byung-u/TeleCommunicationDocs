@@ -1,0 +1,16 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: INVITE
+    Proxy1 -->> UA1: 100 Trying
+    Proxy1 ->> Proxy2: INVITE
+    Proxy2 -->> Proxy1: 100 Trying
+    Proxy2 ->> UA2: INVITE
+    UA2 ->> Proxy2: 180 Ringing
+    activate Proxy2
+    Note right of Proxy2: Timer C check <br/>[OK]
+    deactivate Proxy2
+    Proxy2 ->> Proxy1: 180 Ringing
+    activate Proxy1
+    Note right of Proxy1: Timer C expired
+    deactivate Proxy1
+    Proxy1 ->> UA1: 408 Request Timeout

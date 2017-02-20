@@ -1,0 +1,10 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: INVITE
+    Proxy1 -->> UA1: 100 Trying
+    Proxy1 ->> Proxy2: INVITE
+    activate Proxy2
+    Note right of Proxy2: Transport layer notify error
+    deactivate Proxy2
+    Proxy2 ->> Proxy1: 503 Service Unavailable
+    participant UA2

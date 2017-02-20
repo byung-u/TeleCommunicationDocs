@@ -1,0 +1,13 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: Request
+    Proxy1 ->> Proxy2: Request
+    activate Proxy1
+    Note right of Proxy1: 1. Inspect Request-URI
+    Note right of Proxy1: 2. Inspect URI in the topmost Route header
+    Note right of Proxy1: 3. Determine address, port, transport
+    deactivate Proxy1
+    Proxy2 ->> UA2: Request
+    UA2 -x Proxy2: Response
+    Proxy2 -x Proxy1: Response
+    Proxy1 -x UA1: Response

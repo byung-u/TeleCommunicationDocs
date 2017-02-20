@@ -1,0 +1,21 @@
+%% Sequence diagram code
+sequenceDiagram
+    U1 ->> P1: INVITE
+    Note left of P1: INVITE sip:callee@domain.com SIP/2.0
+    Note left of P1: Contact: sip:caller@u1.example.com
+    P1 ->> P2: INVITE
+    Note right of P1: INVITE sip:callee@domain.com SIP/2.0
+    Note right of P1: Contact: sip:caller@u1.example.com
+    Note right of P1:Record-Route: <sip:p1.example.com:lr>
+    P2 ->> U2: INVITE
+    Note right of P2: INVITE sip:callee@domain.com SIP/2.0
+    Note right of P2: Contact: sip:caller@u1.example.com
+    Note right of P2:Record-Route: <sip:p2.domain.com:lr>
+    Note right of P2:Record-Route: <sip:p1.example.com:lr>
+    U2 -x P2: 200 OK
+    Note right of P2: SIP/2.0 200 OK
+    Note right of P2: Contact: sip:callee@u2.domain.com
+    Note right of P2: Record-Route: <sip:p2.domain.com:lr>
+    Note right of P2: Record-Route: <sip:p1.example.com:lr>
+    P2 -x P1: Response
+    P1 -x U1: Response

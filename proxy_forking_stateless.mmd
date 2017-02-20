@@ -1,0 +1,17 @@
+%% Sequence diagram code
+sequenceDiagram
+    UE1 ->> A: INVITE
+    A -->> UE1: 100 Trying
+    A ->> UE1: 180 Ringing
+    UE1 ->> B: INVITE
+    B -->> UE1: 100 Trying
+    B ->> UE1: 180 Ringing
+    A ->> UE1: 200 OK
+    activate UE1
+    Note left of UE1: Received final response from A
+    Note left of UE1: UAS delete and transaction terminated
+    deactivate UE1
+    B -->> UE1: 200 OK
+    activate UE1
+    Note left of UE1: No UAS, stateless proxy
+    activate UE1

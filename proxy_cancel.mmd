@@ -1,0 +1,17 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: INVITE
+    Proxy1 -->> UA1: 100 Trying
+    Proxy1 ->> Proxy2: INVITE
+    Proxy2 -->> Proxy1: 100 Trying
+    Proxy2 ->> UA2: INVITE
+    UA2 ->> Proxy2: 180 Ringing
+    Proxy2 ->> Proxy1: 180 Ringing
+    Proxy1 ->> UA1: 180 Ringing
+    UA2 ->> Proxy2: 200 OK
+    Proxy2 ->> Proxy1: 200 OK
+    activate Proxy1
+    Note right of Proxy1: Pending client transaction
+    deactivate Proxy1
+    Proxy1 ->> UA1: CANCEL
+    UA1 ->> Proxy1: 200 OK
