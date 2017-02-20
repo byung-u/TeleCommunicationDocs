@@ -22,3 +22,5 @@ Set script path like ~/.zshrc
 % mermaid -w 600 testGraph.mmd
 % imgcat testGraph.mmd.png
 ```
+
+![](https://github.com/byung-u/SIP_sequence_diagram/mermaid.rec)
