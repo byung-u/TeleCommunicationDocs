@@ -23,4 +23,4 @@ Set script path like ~/.zshrc
 % imgcat testGraph.mmd.png
 ```
 
-![](https://github.com/byung-u/SIP_sequence_diagram/blob/master/mermaid.rec)
+![](https://github.com/byung-u/SIP_sequence_diagram/mermaid_sequence_diagram.glf)
