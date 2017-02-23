@@ -11,7 +11,7 @@ sequenceDiagram
     UA2 ->> Proxy2: 200 OK
     Proxy2 ->> Proxy1: 200 OK
     activate Proxy1
-    Note right of Proxy1: Pending client transaction
+    Note right of Proxy1: client transaction 지연
     deactivate Proxy1
     Proxy1 ->> UA1: CANCEL
     UA1 ->> Proxy1: 200 OK

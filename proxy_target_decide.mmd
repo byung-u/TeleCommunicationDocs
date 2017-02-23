@@ -3,8 +3,8 @@ sequenceDiagram
     UA1 ->> Proxy1: Request
     Proxy1 -->> Proxy2: Request
     activate Proxy1
-    Note right of Proxy1: Foward to Proxy2
-    Note left of Proxy1: Not possible here ?
-    Note right of Proxy1: Forward to AS ?
+    Note right of Proxy1: Proxy2로 전달?
+    Note left of Proxy1: 여기서 처리가 불가한가?
+    Note right of Proxy1: AS로 전달 ?
     deactivate Proxy1
     Proxy1 -->> AS: Request

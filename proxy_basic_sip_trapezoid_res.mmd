@@ -3,11 +3,12 @@ sequenceDiagram
     U1 ->> P1: INVITE
     P1 ->> P2: INVITE
     P2 ->> U2: INVITE
-    U2 -x P2: BYE
-    Note right of P2: BYE sip:callee@u2.domain.com SIP/2.0
-    Note right of P2: Route: <sip:p1.example.com:lr>,<sip:p2.domain.com:lr>,
-    P2 -x P1: BYE
+    Note over U1,U2: ... 생략 ... 
+    U1 ->> P1: BYE
+    Note left of P1: BYE sip:callee@u2.domain.com SIP/2.0
+    Note left of P1: Route: <sip:p1.example.com:lr>,<sip:p2.domain.com:lr>,
+    P1 ->> P2: BYE
     Note right of P1: BYE sip:callee@u2.domain.com SIP/2.0
     Note right of P1: Route: <sip:p2.domain.com:lr>
-    P1 -x U1: BYE
-    Note right of U1: BYE sip:callee@u2.domain.com SIP/2.0
+    P2 ->> U2: BYE
+    Note left of U2: BYE sip:callee@u2.domain.com SIP/2.0

@@ -8,10 +8,10 @@ sequenceDiagram
     B ->> UE1: 180 Ringing
     A ->> UE1: 200 OK
     activate UE1
-    Note left of UE1: Received final response from A
-    Note left of UE1: UAS delete and transaction terminated
+    Note left of UE1: A로부터 final response 먼저 수신
+    Note left of UE1: UAS 삭제, transaction 종료
     deactivate UE1
     B -->> UE1: 200 OK
     activate UE1
-    Note left of UE1: No UAS, stateless proxy
+    Note left of UE1: UAS 이미삭제, stateless proxy로 동작
     activate UE1

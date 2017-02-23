@@ -1,0 +1,13 @@
+%% Sequence diagram code
+sequenceDiagram
+    participant U1
+    participant P1
+    participant P2
+    participant U2
+    U1 ->> P1: UDP Request
+    P1 ->> P2: TCP Request
+    Note left of P2: TCP/UDP중 확실하게 전달 할 수 있는 transport를 가지고 statefully하게 전달
+    P2 ->> U2: Request
+    U2 -x P2: Response
+    P2 -x P1: Response
+    P1 -x U1: Response

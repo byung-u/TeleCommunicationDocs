@@ -4,13 +4,16 @@ sequenceDiagram
     Note right of Proxy1: OK, Request foward to Proxy2
     Proxy1 -->> Proxy2: Request
     activate Proxy1
-    Note right of Proxy1: 1. Make a copy request
-    Note right of Proxy1: 2. Update Request-URI, Max-Forwards
-    Note right of Proxy1: 3. Add header fields(Record-route)
-    Note right of Proxy1: 4. Postprocess routing informaiton
-    Note right of Proxy1: 5. Determine next-hop ip,port,tr
-    Note right of Proxy1: 6. Add Via, Content-Length
-    Note right of Proxy1: 7. Forward ---> 
-    Note right of Proxy1: 8. Set timer C
+    Note right of Proxy1: 1. Make a copy of the received request
+    Note right of Proxy1: 2. Update Request-URI
+    Note right of Proxy1: 3. Update Max-Forwards header field
+    Note right of Proxy1: 4. Optionally add Record-route header field value
+    Note right of Proxy1: 5. Optionally add additional header fields
+    Note right of Proxy1: 6. Determine the next-hop address, port, transport
+    Note right of Proxy1: 7. Postprocess routing informaiton
+    Note right of Proxy1: 8. Add a Via header filed value
+    Note right of Proxy1: 9. Add a Content-Length header field if necessary
+    Note right of Proxy1: 10. Forward the new request
+    Note right of Proxy1: 11. Set timer C
     deactivate Proxy1
     Proxy2 ->> UA2: Request
