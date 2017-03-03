@@ -1,0 +1,22 @@
+%% Sequence diagram code
+sequenceDiagram
+    U1 ->> P1: INVITE
+    Note left of P1: INVITE sip:callee@gateway.leftprivatespace.com SIP/2.0
+    Note left of P1: Contact: <sip:caller@u1.leftprivatespace.com>
+    P1 ->> U2: INVITE
+    Note right of P1: INVITE sip:callee@rightprivatespace.com SIP/2.0
+    Note right of P1: Contact: <sip:caller@u1.leftprivatespace.com>
+    Note right of P1: Record-Route: <sip:gateway.rightprivatespace.com:lr>
+    U2 -x P1: 200 OK
+    Note right of P1: SIP/2.0 200 OK
+    Note right of P1: Contact: <sip:callee@u2.rightprivatespace.com>
+    Note right of P1: Record-Route: <sip:gateway.rightprivatespace.com:lr>
+    P1 -x U1: 200 OK
+    Note left of P1: SIP/2.0 200 OK
+    Note left of P1: Contact: <sip:callee@u2.rightprivatespace.com>
+    Note left of P1: Record-Route: <sip:gateway.leftprivatespace.com:lr>
+    U1 ->> P1: BYE
+    Note left of P1: BYE sip:callee@u2.rightprivatespace.com SIP/2.0
+    Note left of P1: Route: <sip:gateway.leftprivatespace.com:lr>
+    P1 ->> U2: BYE
+    Note right of P1: BYE sip:callee@u2.rightprivatespace.com SIP/2.0

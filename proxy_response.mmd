@@ -1,0 +1,20 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: Request
+    Proxy1 ->> Proxy2: Request
+    Proxy2 ->> UA2: Request
+    UA2 ->> Proxy2: Response
+    activate Proxy2
+    Note left of Proxy2: 1. Find the appropriate response context
+    Note left of Proxy2: 2. Update timer C for provisional responses
+    Note left of Proxy2: 3. Remove the topmost Via
+    Note left of Proxy2: 4. Add the response to the response context
+    Note left of Proxy2: 5. Check to see if this response should be forwarded immediately
+    Note left of Proxy2: 6. When necessary, choose the best final response from the response context
+    Note left of Proxy2: 7. Aggregate authorization header field values if necessary
+    Note left of Proxy2: 8. Optionally rewrite Record-Route header field values
+    Note left of Proxy2: 9. Forward the response
+    Note left of Proxy2: 10. Generate any necessary CANCEL requests
+    deactivate Proxy2
+    Proxy2 ->> Proxy1: Response
+    Proxy1 ->> UA1: Response

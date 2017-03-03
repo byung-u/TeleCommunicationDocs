@@ -1,0 +1,10 @@
+%% Sequence diagram code
+sequenceDiagram
+    UA1 ->> Proxy1: INVITE
+    Proxy1 -x UA1: 100 Trying
+    Proxy1 ->> Proxy2: INVITE
+    Proxy2 -x Proxy1: 100 Trying
+    Proxy2 ->> UA2: INVITE
+    UA2 -x Proxy2: 200 OK
+    Proxy2 -x Proxy1: 200 OK
+    Proxy1 -x UA1: 200 OK

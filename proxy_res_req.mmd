@@ -1,0 +1,19 @@
+%% Sequence diagram code
+sequenceDiagram
+    participant U1
+    participant P1
+    participant P2
+    participant U2
+    U1 -->> U2: UPSTREAM
+    U1 ->> P1: Request
+    P1 ->> P2: Request
+    Note left of P2: 직접응답?
+    Note left of P2: 신뢰할 수 있는 요청?
+    Note left of P2: 인증이 필요?
+    Note left of P2: ...
+    P2 ->> U2: Request
+    U2 -x P2: Response
+    P2 -x P1: Response
+    Note left of P2: Error 발생? (xxx error)
+    P1 -x U1: Response
+    U2 -->> U1: DOWNSTREAM

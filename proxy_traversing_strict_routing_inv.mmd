@@ -1,0 +1,18 @@
+%% Sequence diagram code
+sequenceDiagram
+    U1 ->> P1: INVITE
+    P1 ->> P2: INVITE
+    P2 ->> P3: INVITE
+    P3 ->> P4: INVITE
+    P4 ->> U2: INVITE
+    Note right of P4: INVITE sip:callee@u2.domain.com SIP/2.0
+    Note right of P4: Contact: sip:caller@u1.example.com
+    Note right of P4: Record-Route: <sip:p4.domain.com:lr>
+    Note right of P4: Record-Route: <sip:p3.middle.com>
+    Note right of P4: Record-Route: <sip:p2.example.com:lr>
+    Note right of P4: Record-Route: <sip:p1.example.com:lr>
+    U2 -x P4: BYE
+    P4 -x P3: BYE
+    P3 -x P2: BYE
+    P2 -x P1: BYE
+    P1 -x U1: BYE

@@ -1,0 +1,17 @@
+%% Sequence diagram code
+sequenceDiagram
+    UE1 ->> A: INVITE
+    A -->> UE1: 100 Trying
+    A ->> UE1: 180 Ringing
+    UE1 ->> B: INVITE
+    B -->> UE1: 100 Trying
+    B ->> UE1: 180 Ringing
+    A ->> UE1: 200 OK
+    activate UE1
+    Note left of UE1: A로부터 final response 먼저 수신
+    Note left of UE1: UAS 삭제, transaction 종료
+    deactivate UE1
+    B -->> UE1: 200 OK
+    activate UE1
+    Note left of UE1: UAS 이미삭제, stateless proxy로 동작
+    activate UE1
