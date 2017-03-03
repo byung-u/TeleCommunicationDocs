@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 # encoding: utf-8
 import sys
 
@@ -12,7 +12,9 @@ def main():
         sys.exit(2)
 
     file_name = sys.argv[1]
-    print(file_name)
+    get_hearder_field(file_name)
+
+def get_hearder_field(file_name):
     print('[Line]\t Header Field')
     with open(file_name) as f:
         for i, line in enumerate(f):
@@ -26,10 +28,23 @@ def main():
                     continue
                 if split_line[j+1].startswith('field') is False:
                     continue
-                print('[%d]\t %s' % (i+1, split_line[j-1]))
+                header_field = split_line[j-1]
+                header_field = header_field.replace('\'','').replace('(','').replace(')','').replace(':','')
+                if header_valid_check(header_field) is False:
+                    continue
+                print('%s +%d\t %s' % (file_name, i+1, header_field))
                 # print(i, split_line[j-1], split_line[j], split_line[j+1])
     f.closed
 
+def header_valid_check(keyword):
+    not_allow_keyword = ['to', 'SIP', 'uri', 'tag', 'such', 'unknown', 
+            'yes', 'the', 'that', 'of', 'these', 'following', 'this', 'other',
+            'whole', 'some', 'those', 'a']
+
+    if keyword in not_allow_keyword:
+        return False
+    else:
+        return True
 
 if __name__ == '__main__':
     main()
