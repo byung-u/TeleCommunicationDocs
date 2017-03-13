@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Use 'https://tools.ietf.org' instead of this script.
@@ -44,6 +44,7 @@ def conunt_word(file_name):
 
     print('----------------------')
     print('Total: ', len(list(wc)))
+    f.close()
 
 
 if __name__ == "__main__":
